@@ -1,0 +1,31 @@
+#1
+'''The power of lambda is better shown when you use them 
+as an anonymous function inside another function.'''
+def myfunc(n):
+  return lambda a : a * n
+
+#2
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+
+print(mydoubler(11))
+
+#3
+def myfunc(n):
+  return lambda a : a * n
+
+mytripler = myfunc(3)
+
+print(mytripler(11))
+
+#4
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+mytripler = myfunc(3)
+
+print(mydoubler(11))
+print(mytripler(11))
