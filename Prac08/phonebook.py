@@ -5,6 +5,14 @@ def insert_or_update(cur):
     phone = input("Phone: ")
     cur.execute("CALL insert_or_update_user(%s, %s)", (name, phone))
 
+def insert_many_users(cur):
+    names = input("Names: ").split(",")
+    phones = input("Phones: ").split(",")
+
+    names = [x.strip().replace('"', '') for x in names]
+    phones = [x.strip().replace('"', '') for x in phones]
+
+    cur.execute("CALL insert_many_users(%s, %s)", (names, phones))
 
 def search(cur):
     pattern = input("Search: ")
@@ -34,6 +42,7 @@ def main():
         print("3. Pagination")
         print("4. Delete")
         print("5. Exit")
+        print("6. Insert List")
 
         choice = input("Choose: ")
 
@@ -47,6 +56,8 @@ def main():
             delete(cur)
         elif choice == "5":
             break
+        elif choice == "6":
+            insert_many_users(cur)
 
         conn.commit()
 
