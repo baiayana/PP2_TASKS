@@ -2,7 +2,7 @@ import pygame
 
 
 class Ball:
-    def __init__(self, x, y, radius=25, color=(255, 0, 0), step=20):
+    def __init__(self, x, y, radius=25, color=(255, 0, 0), step=10):
         self.x = x
         self.y = y
         self.radius = radius
@@ -26,4 +26,4 @@ class Ball:
             self.x += self.step
 
     def draw(self, screen):
-        pygame.draw.circle(screen, self.color, (self.x, self.y), self.radius)
+        pygame.draw.rect(screen, self.color, (self.x +10, self.y+10, 100, 100))

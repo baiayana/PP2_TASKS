@@ -25,7 +25,7 @@ def draw_clock_face(screen, center, radius=180):
     pygame.draw.circle(screen, INNER_COLOR, center, radius - 6)
 
     for i in range(60):
-        angle_rad = math.radians(i * 6 - 90)
+        angle_rad = math.radians(i * 60 - 90)
 
         if i % 5 == 0:
             inner = radius - 24
