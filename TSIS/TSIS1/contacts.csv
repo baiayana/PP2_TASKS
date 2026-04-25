@@ -1,0 +1,6 @@
+name,email,birthday,group,phone,phone_type
+Alice,alice@gmail.com,2005-01-10,Friend,87001112233,mobile
+Alice,alice@gmail.com,2005-01-10,Friend,87005556677,home
+Bob,bob@company.com,2001-03-15,Work,87002223344,work
+Charlie,charlie@yahoo.com,1999-07-21,Family,87003334455,mobile
+Diana,diana@mail.com,2003-11-02,Other,87004445566,home
